@@ -67,16 +67,17 @@
     <div class="container">
 
         <?php 
-            // for ($i = 0; $i < count($posts); $i++) {
-            //     echo $posts[$i];
-            // }
 
-            foreach ($posts as $element) {
-                echo $element, "date";
+            foreach ($posts as $key => $element) {
+                ?>
+
+                <h1><?php echo $key; ?></h1>
+
+                <?php
 
                 for ($i = 0; $i < count($element); $i++) {
                     ?>
-                    <h1><?php echo $element[$i]['title'] ?></h1>
+                    <h2><?php echo $element[$i]['title'] ?></h2>
                     <p> <?php echo $element[$i]['author'] ?></p>
                     <p> <?php echo $element[$i]['text'] ?></p>
                     <?php
